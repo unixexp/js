@@ -1,0 +1,122 @@
+.PhotoPreview {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--photo-preview-window-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &Container {
+        display: flex;
+        width: 95%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &Arrow {
+        width: 64px;
+        height: 64px;
+    }
+
+    &ArrowImage {
+        fill: var(--photo-preview-arrow-image-fill);
+        cursor: pointer;
+        width: 64px;
+        height: 64px;
+        background-color: var(--photo-preview-arrow-image-bgcolor);
+        border-radius: 50%;
+        transition: all .3s;
+
+        &:hover {
+            background-color: var(--photo-preview-arrow-image-bgcolor-hover);
+        }
+    }
+
+    &Item {
+        border: 1px solid;
+        border-radius: 15px;
+        border-color: var(--photo-item-border-color);
+        width: 1000px;
+        padding: 15px;
+        margin: 0 10px;
+        overflow: hidden;
+        background-color: var(--photo-preview-item-background);
+
+        &Header {
+            color: var(--photo-preview-item-header-color);
+            font-size: 18px;
+            padding-bottom: 15px;
+        }
+
+        &Description {
+            color: var(--photo-preview-item-description-color);
+            font-size: 16px;
+            font-weight: 100;
+            line-height: 1.5em;
+        }
+
+        &ImageContainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        &ImageH {
+            width: 100%;
+            height: 100%;
+            padding-bottom: 15px;
+
+            img {
+                border-radius: 15px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+
+        &ImageV {
+            width: 50%;
+            padding-bottom: 15px;
+
+            img {
+                border-radius: 15px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+    
+    }
+}
+
+@media (max-width: 992px) {
+    .PhotoPreview {
+        &Arrow {
+            width: 48px;
+            height: 48px;
+        }
+    
+        &ArrowImage {
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .PhotoPreview {
+        &Arrow {
+            width: 24px;
+            height: 24px;
+        }
+    
+        &ArrowImage {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

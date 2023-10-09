@@ -1,0 +1,15 @@
+.slider {
+    overflow: hidden;
+}
+
+.slider__track {
+    overflow: hidden;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    margin-left: 0;
+    transition: margin 1s ease;
+}
+
+.slider__item {
+    padding: 0 10px;
+}

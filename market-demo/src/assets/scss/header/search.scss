@@ -1,0 +1,41 @@
+.search {
+
+    position: relative;
+    width: 100%;
+
+    &__field {
+        width: 100%;
+        font-size: 16px;
+        border-radius: 40px;
+        box-shadow: 2px 2px 2px $shadowColor;
+        height: 42px;
+        padding: 16px 16px;
+        color: $textColor;
+
+        &::placeholder {
+            color: $textColorLight;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        right: 0;
+        top: 0;
+        border-radius: 50%;
+        background-color: $secondaryColor;
+        transition: background-color .2s ease;
+
+        &:hover {
+            background-color: $secondaryColorActive;
+        }
+    }
+
+    &__img {
+        width: 24px;
+        height: 24px;
+        fill: $iconColor;
+    }
+}

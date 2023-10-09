@@ -1,0 +1,173 @@
+@media (max-width: 1200px) {
+    
+	.phone-list {
+		margin-bottom: 0;
+
+		&__arrow {
+        	display: none;
+    	}
+
+    	&__phone--current {
+        	display: none;
+    	}
+
+    	&__img-wrapper {
+    		height: 42px;
+    	}
+
+    	&__img {
+    		width: 42px;
+    	}
+
+    	&__list {
+    		min-width: 142px;
+    		left: 0;
+    	}
+
+    	&__list-item:first-child {
+        	display: block;
+    	}
+	}
+
+	.header {
+		&__phones {
+			min-width: 0;
+		}
+
+		&__search {
+        	width: 100%;
+        	padding-left: 15px;
+    	}
+	}
+
+	.container {
+		max-width: 1000px;
+	}
+
+	.news-slider {
+		.slider__item {
+			width: 284px;
+		}
+	}
+
+}
+
+@media (max-width: 996px) {
+	.header {
+		&__left-block {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__search {
+			display: flex;
+			padding-left: 0;
+		}
+
+		&__left-block div:not(:last-child) {
+			padding-bottom: 15px;
+		}
+	}
+
+	.search {
+		width: 100%;
+	}
+
+	.container {
+		max-width: 996px;
+	}
+}
+
+@media (max-width: 688px) or (max-height: 540px) {
+	.tools {
+		flex-direction: row;
+		margin-top: 8px;
+		gap: 0;
+
+		.icon-text__text {
+			display: none;
+		}
+
+		&__account {
+			display: none;
+		}
+
+		&__lang {
+			display: none;
+		}
+
+		&__favorites {
+			display: none;
+		}
+	}
+
+	.header {
+		&__logo {
+			display: none;
+		}
+
+		&__content {
+			align-items: center;
+		}
+
+		&__search {
+			min-width: 300px;
+			padding-left: 0;
+		}
+
+		&__right-block {
+			align-items: flex-start;
+		}
+
+		&__phones {
+			display: none;
+		}
+
+		&__tools {
+			padding-left: 10px;
+		}
+	}
+
+	.phone-list {
+		&__img-wrapper {
+			padding-right: 0;
+			height: 24px;
+		}
+
+		&__img {
+			height: 24px;
+		}
+	}
+
+	.menu {
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+		overflow: auto;
+
+		&__submenu {
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 100%;
+			border-radius: 0;
+			box-shadow: none;
+		}
+
+
+	}
+}
+
+@media (max-width: 380px) {
+	.container {
+		max-width: 320px;
+	}
+
+	.news-slider {
+		.slider__item {
+			width: 220px;
+		}
+	}
+}

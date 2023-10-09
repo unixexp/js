@@ -1,0 +1,51 @@
+.Photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &Container {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 664px) {
+    .Photos {
+        padding: 0 10px;
+
+        &Container {
+            width: 576px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .Photos {
+        padding: 0 10px;
+
+        &Container {
+            width: 488px;
+        }
+    }
+}
+
+@media (max-width: 488px) {
+    .Photos {
+        padding: 0 10px;
+
+        &Container {
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .Photos {
+        padding: 0 10px;
+
+        &Container {
+            width: 320px;
+        }
+    }
+}

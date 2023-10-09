@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="container">
+                    <div class="header__content">
+                        <div class="header__left-block">
+                            <div class="header__logo">
+                                <a class="header__logo-link" href="/">
+                                    <img class="header__logo-img" src="assets/img/logo.svg", alt="logo"/>
+                                </a>
+                            </div>
+
+                            <div class="header__search">
+                                <button class="menu-btn menu-btn--header">
+                                    <span class="menu-btn__text">Catalog</span>
+                                </button>
+
+                                <div class="search">
+                                    <input type="text" name="search" value placeholder="Поиск"
+                                        class="search__field" livesearch="off" minlength="3">
+                                    <button class="search__btn">
+                                        <svg class="search__img" viewBox="0 0 32 32">
+                                            <use xlink:href="assets/img/sprites.svg#search"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__right-block">
+                            <div class="header__phones">
+                                <div class="phone-list">
+                                    <div class="phone-list__img-wrapper">
+                                        <svg class="phone-list__img" viewBox="0 0 32 32">
+                                            <use xlink:href="assets/img/sprites.svg#phone"></use>
+                                        </svg>
+                                    </div>
+
+                                    <a href="tel:+380121231313" class="phone-list__phone phone-list__phone--current">(012) 123-13-13</a>
+
+                                    <ul class="phone-list__list">
+                                        <li class="phone-list__list-item">
+                                            <a href="tel:+380121231313" class="phone-list__phone">(012) 123-13-13</a>
+                                        </li>
+                                        <li class="phone-list__list-item">
+                                            <a href="tel:+380121241414" class="phone-list__phone">(012) 124-14-14</a>
+                                        </li>
+                                        <li class="phone-list__list-item">
+                                            <a href="tel:+380121251515" class="phone-list__phone">(012) 125-15-15</a>
+                                        </li>
+                                    </ul>
+
+                                    <svg class="phone-list__arrow" viewBox="0 0 32 32">
+                                        <use xlink:href="assets/img/sprites.svg#arrow-down"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="header__tools">
+                                <div class="tools">
+                                    <div class="tools__account">
+                                        <a href="/accounts">
+                                            <div class="icon-text">
+                                                <div class="icon-text__img-wrapper">
+                                                    <svg class="icon-text__img" viewBox="0 0 32 32">
+                                                        <use xlink:href="assets/img/sprites.svg#account"></use>
+                                                    </svg>
+                                                </div>
+                                                <span class="icon-text__text">Login</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="tools__lang">
+                                        <a href="/lang">
+                                            <div class="icon-text">
+                                                <div class="icon-text__img-wrapper">
+                                                    <svg class="icon-text__img" viewBox="0 0 32 32">
+                                                        <use xlink:href="assets/img/sprites.svg#earth"></use>
+                                                    </svg>
+                                                </div>
+                                                <span class="icon-text__text">UK</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="tools__favorites">
+                                        <a href="/favorites">
+                                            <div class="icon-text">
+                                                <div class="icon-text__img-wrapper">
+                                                    <svg class="icon-text__img" viewBox="0 0 32 32">
+                                                        <use xlink:href="assets/img/sprites.svg#heart"></use>
+                                                    </svg>
+                                                    <span class="icon-text__counter">12</span>
+                                                </div>
+                                                <span class="icon-text__text">Favorites</span>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="tools__cart">
+                                        <a href="/cart">
+                                            <div class="icon-text">
+                                                <div class="icon-text__img-wrapper">
+                                                    <svg class="icon-text__img" viewBox="0 0 32 32">
+                                                        <use xlink:href="assets/img/sprites.svg#cart"></use>
+                                                    </svg>
+                                                    <span class="icon-text__counter">1</span>
+                                                </div>
+                                                <span class="icon-text__text">Cart</span>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="container">
+                    <ul class="menu">
+                        <li class="menu__item menu__item--submenu">
+                            <a class="menu__link" href="#">Guitars</a>
+                            <svg class="menu__arrow" viewBox="0 0 32 32">
+                                <use xlink:href="assets/img/sprites.svg#arrow-right"></use>
+                            </svg>
+                            <ul class="menu__submenu">
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/guitars/accoustic">Accoustic guitars</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/guitars/electric">Electric guitars</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/guitars/bass">Bass guitars</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="/products/amps">Guitar amps, cabinets</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="/products/effects">Effects and processors</a>
+                        </li>
+                        <li class="menu__item menu__item--submenu">
+                            <a class="menu__link" href="#">Guitar accessories</a>
+                            <svg class="menu__arrow" viewBox="0 0 32 32">
+                                <use xlink:href="assets/img/sprites.svg#arrow-right"></use>
+                            </svg>
+                            <ul class="menu__submenu">
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/guitars/accessories/mediators">Mediators</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/guitars/accessories/slides-and-capos">Slides and capos</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/guitars/accessories/straps">Straps</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/guitars/accessories/racks">Racks, stands, holders</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/guitars/accessories/electronic">Electronic</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item menu__item--submenu">
+                            <a class="menu__link" href="#">Keyboards</a>
+                            <svg class="menu__arrow" viewBox="0 0 32 32">
+                                <use xlink:href="assets/img/sprites.svg#arrow-right"></use>
+                            </svg>
+                            <ul class="menu__submenu">
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/keyboards/digital">Digital pianos and organs</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/keyboards/synth">Synthesizers</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/keyboards/midi">MIDI keyboards</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/keyboards/covers">Covers and cases for keyboard instruments</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/keyboards/racks">Racks for keyboard instruments</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item menu__item--submenu">
+                            <a class="menu__link" href="#">Drums and percussion</a>
+                            <svg class="menu__arrow" viewBox="0 0 32 32">
+                                <use xlink:href="assets/img/sprites.svg#arrow-right"></use>
+                            </svg>
+                            <ul class="menu__submenu">
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/drums/acoustic">Acoustic drums</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/drums/electric">Electric drums</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/drums/percussion">Percussion</a>
+                                </li>
+                                <li class="menu__submenu-item">
+                                    <a class="menu__submenu-link" href="/products/drums/components">Accessories and components</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class="main__test-picture" href="#">
+                        <img class="main__test-picture-image"
+                            src="assets/img/test.png"
+                            alt="Test picture" />
+                    </a>
+                    <a href="about.html" class="main__link link">Got to About</a>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="news">
+                        <div class="news__title">News</div>
+                        <div class="news__arrows">
+                            <div class="news__arrow-img-wrapper">
+                                <svg class="news__arrow-img news-arrow-left" viewBox="0 0 32 32">
+                                    <use xlink:href="assets/img/sprites.svg#arrow-left"></use>
+                                </svg>
+                            </div>
+                            <div class="news__arrow-img-wrapper">
+                                <svg class="news__arrow-img news-arrow-right news__arrow-img--enabled" viewBox="0 0 32 32">
+                                    <use xlink:href="assets/img/sprites.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="news__content">
+                            <div class="news-slider">
+                                <div class="slider">
+                                    <div class="slider__track">
+                                        <div class="slider__item">
+                                            <div class="new-card">
+                                                <div class="new-card__img">
+                                                    <a href="/">
+                                                        <img src="assets/img/news/gibson-exclusive-collection.jpg" alt="Guitar">
+                                                    </a>
+                                                </div>
+                                                <a class="new-card__title" href="/">
+                                                    Here should be new title but not very long
+                                                </a>
+                                                <div class="new-card__desc">
+                                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                                    when an unknown printer took a galley of type and scrambled it
+                                                    to make a type specimen book.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider__item">
+                                            <div class="new-card">
+                                                <div class="new-card__img">
+                                                    <a href="/">
+                                                        <img src="assets/img/news/amp.jpg" alt="Amp">
+                                                    </a>
+                                                </div>
+                                                <a class="new-card__title" href="/">
+                                                    Here should be new title but not very long
+                                                </a>
+                                                <div class="new-card__desc">
+                                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                                    when an unknown printer took a galley of type and scrambled it
+                                                    to make a type specimen book.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider__item">
+                                            <div class="new-card">
+                                                <div class="new-card__img">
+                                                    <a href="/">
+                                                        <img src="assets/img/news/effect.jpeg" alt="Effect">
+                                                    </a>
+                                                </div>
+                                                <a class="new-card__title" href="/">
+                                                    Here should be new title but not very long
+                                                </a>
+                                                <div class="new-card__desc">
+                                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                                    when an unknown printer took a galley of type and scrambled it
+                                                    to make a type specimen book.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider__item">
+                                            <div class="new-card">
+                                                <div class="new-card__img">
+                                                    <a href="/">
+                                                        <img src="assets/img/news/remni.jpeg" alt="Remni">
+                                                    </a>
+                                                </div>
+                                                <a class="new-card__title" href="/">
+                                                    Here should be new title but not very long
+                                                </a>
+                                                <div class="new-card__desc">
+                                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                                    when an unknown printer took a galley of type and scrambled it
+                                                    to make a type specimen book.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider__item">
+                                            <div class="new-card">
+                                                <div class="new-card__img">
+                                                    <a href="/">
+                                                        <img src="assets/img/news/keys.jpg" alt="Keys">
+                                                    </a>
+                                                </div>
+                                                <a class="new-card__title" href="/">
+                                                    Here should be new title but not very long
+                                                </a>
+                                                <div class="new-card__desc">
+                                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                                    when an unknown printer took a galley of type and scrambled it
+                                                    to make a type specimen book.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider__item">
+                                            <div class="new-card">
+                                                <div class="new-card__img">
+                                                    <a href="/">
+                                                        <img src="assets/img/news/dj.jpg" alt="DJ">
+                                                    </a>
+                                                </div>
+                                                <a class="new-card__title" href="/">
+                                                    Here should be new title but not very long
+                                                </a>
+                                                <div class="new-card__desc">
+                                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                                    when an unknown printer took a galley of type and scrambled it
+                                                    to make a type specimen book.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider__item">
+                                            <div class="new-card">
+                                                <div class="new-card__img">
+                                                    <a href="/">
+                                                        <img src="assets/img/news/studio.jpeg" alt="Studio">
+                                                    </a>
+                                                </div>
+                                                <a class="new-card__title" href="/">
+                                                    Here should be new title but not very long
+                                                </a>
+                                                <div class="new-card__desc">
+                                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                                    when an unknown printer took a galley of type and scrambled it
+                                                    to make a type specimen book.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider__item">
+                                            <div class="new-card">
+                                                <div class="new-card__img">
+                                                    <a href="/">
+                                                        <img src="assets/img/news/headphones.jpeg" alt="Headphones">
+                                                    </a>
+                                                </div>
+                                                <a class="new-card__title" href="/">
+                                                    Here should be new title but not very long
+                                                </a>
+                                                <div class="new-card__desc">
+                                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                                    when an unknown printer took a galley of type and scrambled it
+                                                    to make a type specimen book.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

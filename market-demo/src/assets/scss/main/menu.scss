@@ -1,0 +1,94 @@
+.menu {
+	z-index: 10;
+	position: absolute;
+	width: 300px;
+	height: 104%;
+	left: 20px;
+	top: -2%;
+	background-color: $backgroundColor;
+	border-radius: 10px;
+	box-shadow: 3px 1px 7px rgb(0 0 0 / 20%);
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: .6px;
+	padding-bottom: 5px;
+	transition: height .3s ease;
+	overflow: visible;
+
+	&__link {
+		font-size: 16px;
+		color: $textColorDark;
+		transition: color .1s ease;
+	}
+
+	&__item {
+		cursor: pointer;
+		text-align: justify;
+		padding: 15px 20px 10px 20px;
+		line-height: 32px;
+	}
+
+	&__item:hover &__link {
+		color: $secondaryColorActive;
+	}
+
+	&__item:hover &__arrow {
+		fill: $secondaryColorActive;
+	}
+
+	&__item:hover &__submenu {
+		display: block;
+	}
+
+	&__item--submenu {
+		position: relative;
+	}
+
+	&__arrow {
+		fill: $textColorDark;
+		width: 16px;
+		right: 16px;
+		top: 20px;
+		position: absolute;
+		transition: fill .2s ease;
+	}
+
+	&__submenu {
+		position: absolute;
+		background-color: $backgroundColor;
+		border-radius: 10px;
+		box-shadow: 3px 1px 7px rgb(0 0 0 / 20%);
+		font-weight: 400;
+		font-size: 16px;
+		letter-spacing: .6px;
+		left: 100%;
+		top: 0;
+		width: 100%;
+		display: none;
+
+		&-item {
+			padding: 15px 20px 10px 20px;
+			line-height: 150%;
+			cursor: pointer;
+		}
+
+		&-item:hover &-link {
+			color: $secondaryColorActive;
+		}
+
+		&-link {
+			font-size: 16px;
+			color: $textColorDark;
+			transition: color .1s ease;
+		}
+	}
+
+	&--minimized {
+		overflow: hidden;
+		height: 0;
+	}
+
+	&--hidden {
+		opacity: 0;
+	}
+}

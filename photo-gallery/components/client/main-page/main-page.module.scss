@@ -1,0 +1,16 @@
+.MainPage {
+    color: var(--page-text-color);
+    background-color: var(--page-background-color);
+    height: 100%;
+
+    &Categories {
+        display: flex;
+        justify-content: center;
+        background-color: var(--page-background-color);
+    }
+
+    &Photos {
+        padding-top: 20px;
+        background-color: var(--page-background-color);
+    }
+}

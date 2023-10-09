@@ -1,0 +1,40 @@
+@import "./reset.scss";
+@import "./fonts.scss";
+@import "./vars.scss";
+@import "./util.scss";
+
+body {
+    background-color: $mainColor;
+    color: $textColor;
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+}
+
+.header {
+    &__inner {
+        margin: 20px 20px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 48px;
+    }
+}
+
+.link {
+    color: $linkColor;
+    font-size: 24px;
+    display: inline-block;
+    &:hover {
+        color: $linkColorHovered;
+    }
+}
+
+.main {
+    text-align: center;
+
+    &__test-picture {
+        display: block;
+    }
+}
+

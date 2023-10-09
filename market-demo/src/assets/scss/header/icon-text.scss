@@ -1,0 +1,47 @@
+.icon-text {
+    display: flex;
+    align-items: self-end;
+
+    &__img {
+        width: 24px;
+        fill: $primaryColor;
+        transition: fill .2s ease;
+    }
+
+    &__text {
+        color: $primaryColor;
+        transition: color .2s ease;
+    }
+
+    &:hover &__text {
+        color: $secondaryColor;
+    }
+
+    &:hover &__img {
+        fill: $secondaryColor;
+    }
+
+    &__img-wrapper {
+        position: relative;
+        height: 24px;
+        padding-right: 8px;
+    }
+
+    &__counter {
+        position: absolute;
+        right: 2px;
+        bottom: -8px;
+        border-radius: 50%;
+        background-color: $secondaryColor;
+        width: 18px;
+        height: 18px;
+        color: $iconTextColor;
+        line-height: 18px;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+
+
+

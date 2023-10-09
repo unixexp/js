@@ -1,0 +1,193 @@
+.CategorySelector {
+    display: flex;
+    align-items: center;
+    margin-top: -80px;
+    position: relative;
+
+    &Body {
+        overflow: hidden;
+        margin: 0 10px 0 10px;
+        width: 920px;
+    }
+
+    &Track {
+        overflow: hidden;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        margin-left: 0;
+        transition: margin 1s ease;
+    }
+
+    &Item {
+        cursor: pointer;
+        border-radius: 15px;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &Image {
+            width: 300px;
+            height: 188px;
+
+            &Title {
+                margin: 20px 0 10px;
+                color: #fff;
+                display: inline-block;
+                font-weight: 700;
+                line-height: 20px;
+            }
+
+            &Description {
+                color: #fff;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    
+        &Image img {
+            border-radius: 15px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &HoverEffect {
+            background-color: var(--categories-selector-item-hover-effect-bg-color);
+            color: var(--categories-selector-item-hover-effect-text-color);
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            opacity: 0;
+            transition: all 0.3s;
+            font-size: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    .CategorySelectorItem:hover .CategorySelectorItemHoverEffect {
+        top: 0;
+        opacity: 1;
+    }
+
+    &Arrow {
+        width: 48px;
+        height: 48px;
+    }
+
+    &ArrowImg {
+        fill: #fff;
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        background-color: #3480fa;
+        border-radius: 50%;
+        transition: all .3s;
+
+        &Disabled {
+            fill: #fff;
+            cursor: pointer;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #78acff;
+        }
+
+        &:hover {
+            background-color: #78acff;
+        }
+    }
+}
+
+@media (min-width: 200px) {
+    .CategorySelector {
+        margin-top: -40px;
+
+        &Body {
+            width: 250px;
+        }
+
+        &Item {
+            &Image {
+                width: 120px;
+                height: 88px;
+            }
+        }
+    }
+}
+
+@media (min-width: 510px) {
+    .CategorySelector {
+        margin-top: -40px;
+
+        &Body {
+            width: 350px;
+        }
+
+        &Item {
+            &Image {
+                width: 170px;
+                height: 106px;
+            }
+        }
+    }
+}
+
+@media (min-width: 668px) {
+    .CategorySelector {
+        margin-top: -80px;
+
+        &Body {
+            width: 535px;
+        }
+
+        &Item {
+            &Image {
+                width: 260px;
+                height: 163px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .CategorySelector {
+        margin-top: -80px;
+
+        &Body {
+            width: 800px;
+        }
+
+        &Item {
+            &Image {
+                width: 260px;
+                height: 163px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .CategorySelector {
+        margin-top: -80px;
+
+        &Body {
+            width: 920px;
+        }
+
+        &Item {
+            &Image {
+                width: 300px;
+                height: 188px;
+            }
+        }
+    }
+}

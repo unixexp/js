@@ -1,0 +1,44 @@
+@import "./reset.scss";
+@import "./fonts.scss";
+@import "./vars.scss";
+
+.container {
+	max-width: $maxWidth;
+	margin: 0 auto;
+	padding: 0 15px;
+    position: relative;
+}
+
+.debug-border {
+	border: 1px solid #333;
+}
+
+body {
+    background-color: $backgroundColor;
+    color: $textColor;
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+}
+
+.page {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.link {
+    font-size: 24px;
+    display: inline-block;
+    &:hover {
+        
+    }
+}
+
+.main {
+    text-align: center;
+
+    &__test-picture {
+        display: block;
+    }
+}
+
+

@@ -1,0 +1,66 @@
+@import "./fonts.scss";
+
+body {
+    font-family: "Roboto";
+    
+}
+
+.dark {
+    --page-background-color: #111;
+    --page-text-color: #000;
+
+    --header-color: #fff;
+    --header-border-color: #555;
+
+    --button-background-color: transparent;
+    --button-border-color: #fff;
+    --button-text-color: #fff;
+    --button-background-hover-color: rgba(0, 0, 0, 0.6);
+
+    --main-banner-overlay-background-color: rgba(0, 0, 0, 0.6);
+
+    --photo-item-text-color: #fff;
+    --photo-item-border-color: #222;
+
+    --photo-preview-window-color: rgba(0, 0, 0, 0.7);
+    --photo-preview-item-background: rgba(0, 0, 0, 0.7);
+    --photo-preview-item-header-color: #fff;
+    --photo-preview-item-description-color: #fff;
+
+    --photo-preview-arrow-image-fill: #fff;
+    --photo-preview-arrow-image-bgcolor: #3480fa;
+    --photo-preview-arrow-image-bgcolor-hover: #78acff;
+
+    --categories-selector-item-hover-effect-bg-color: rgba(0, 0, 0, 0.8);
+    --categories-selector-item-hover-effect-text-color: #fff;
+}
+
+.light {
+    --page-background-color: #fff;
+    --page-text-color: #333;
+
+    --header-color: #333;
+    --header-border-color: #555;
+
+    --button-background-color: transparent;
+    --button-border-color: #222;
+    --button-text-color: #222;
+    --button-background-hover-color: rgba(0, 0, 0, 0.1);
+
+    --main-banner-overlay-background-color: rgba(255, 255, 255, 0.6);
+
+    --photo-item-text-color: #222;
+    --photo-item-border-color: #ccc;
+
+    --photo-preview-window-color: rgba(255, 255, 255, 0.7);
+    --photo-preview-item-background: rgba(255, 255, 255, 0.7);
+    --photo-preview-item-header-color: #222;
+    --photo-preview-item-description-color: #222;
+
+    --photo-preview-arrow-image-fill: #fff;
+    --photo-preview-arrow-image-bgcolor: #3480fa;
+    --photo-preview-arrow-image-bgcolor-hover: #78acff;
+
+    --categories-selector-item-hover-effect-bg-color: rgba(255, 255, 255, 0.8);
+    --categories-selector-item-hover-effect-text-color: #111;
+}

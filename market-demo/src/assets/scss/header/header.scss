@@ -1,0 +1,50 @@
+@import "../vars.scss";
+@import "./menu-btn.scss";
+@import "./search.scss";
+@import "./phone-list.scss";
+@import "./icon-text.scss";
+@import "./tools.scss";
+
+.header {
+
+    background-color: $panelColor;
+
+    &__content {
+        display: flex;
+        align-items: self-end;
+        padding: 15px 0;
+    }
+
+    &__left-block {
+        display: flex;
+        align-items: self-end;
+        width: 100%;
+    }
+
+    &__right-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: self-end;
+    }
+
+    &__logo-img {
+        height: 127px;
+    }
+
+    &__search {
+        padding-left: 15px;
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+
+    &__phones {
+        min-width: 200px;
+        padding-left: 15px;
+    }
+
+    &__tools {
+        padding-left: 15px;
+    }
+
+}

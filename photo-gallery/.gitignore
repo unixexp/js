@@ -1,0 +1,9 @@
+# Default ignored files
+__pycache__
+.idea
+node_modules
+dist
+.DS_Store
+photo-gallery.db
+prisma/migrations
+.next

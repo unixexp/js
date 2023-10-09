@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:../photo-gallery.db"
+}
+
+model Category {
+  id                Bytes               @id
+  createdAt         DateTime            @default(now()) @map("created_at")
+  updatedAt         DateTime?           @updatedAt @map("updated_at")
+  name              String              @unique
+  description       String?
+  mainPhoto         String?             @map("main_photo")
+  CategoryPhotoLink CategoryPhotoLink[]
+
+  @@map("categories")
+}
+
+model Photo {
+  id                Bytes               @id
+  createdAt         DateTime            @default(now()) @map("created_at")
+  updatedAt         DateTime?           @updatedAt @map("updated_at")
+  name              String?
+  description       String?
+  originalFileName  String
+  thumbnailFileName String
+  originalUUID      String
+  thumbnailUUID     String
+  CategoryPhotoLink CategoryPhotoLink[]
+
+  @@map("photos")
+}
+
+model CategoryPhotoLink {
+  id         Bytes     @id
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime? @updatedAt @map("updated_at")
+  categoryId Bytes     @map("category_id")
+  photoId    Bytes     @map("photo_id")
+  order      Int
+
+  Category Category? @relation(fields: [categoryId], references: [id])
+  Photo    Photo?    @relation(fields: [photoId], references: [id])
+
+  @@unique([categoryId, photoId], name: "uq_category_id_photo_id")
+  @@map("category_photo_links")
+}
+
+model RefreshSession {
+  id           Bytes     @id
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime? @updatedAt @map("updated_at")
+  expiresIn    Int       @map("expires_id")
+  refreshToken String    @map("refresh_token")
+  userId       Bytes     @map("user_id")
+
+  User User @relation(fields: [userId], references: [id])
+
+  @@unique([refreshToken], name: "uq_refresh_token")
+}
+
+model User {
+  id             Bytes            @id
+  createdAt      DateTime         @default(now()) @map("created_at")
+  updatedAt      DateTime?        @updatedAt @map("updated_at")
+  login          String           @unique
+  password       String
+  role           String
+  RefreshSession RefreshSession[]
+
+  @@map("users")
+}

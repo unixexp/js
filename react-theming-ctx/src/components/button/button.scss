@@ -1,0 +1,26 @@
+.btn {
+    padding: 4px;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    &.theme-light {
+        background-color: #ccc;
+        border-color: #bbb;
+        color: #000;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+
+    &.theme-dark {
+        background-color: #222;
+        border-color: #f00;
+        color: #fff;
+
+        &:hover {
+            background-color: #555;
+        }
+    }
+}

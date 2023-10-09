@@ -1,0 +1,14 @@
+.app {
+    font-size: 24px;
+    width: 100%;
+    min-height: 100vh;
+
+    &.theme-light {
+        background-color: #fff;
+        color: #000;
+    }
+    &.theme-dark {
+        background-color: #000;
+        color: #f00;
+    }
+}
