@@ -5,10 +5,50 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            @media (max-width: 644px) {
+                body {
+                    label {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            @media (max-width: 580px) {
+                body {
+                    label {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            @media (max-width: 500px) {
+                body {
+                    .form_block {
+                        flex-direction: column;
+                    }
+
+                    .form_items_a {
+                        width: 100%;
+                    }
+
+                    .form_items_b {
+                        width: 100%;
+                    }
+
+                    label {
+                        font-size: 16px;
+                    }
+                }
+            }
+
             input[type="text"] {
                 box-sizing: border-box;
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
+            }
+
+            input[type="text"] {
+                margin-bottom: 8px;
             }
 
             .def_inp {
@@ -34,13 +74,18 @@
             .container {
                 display: flex;
                 flex-direction: column;
-                max-width: 640px;
+                max-width: 680px;
                 margin: 0 auto;
-                padding: 0 20px;
+                padding: 10px 10px;
             }
 
             .image_block {
                 text-align: center;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
             }
 
             .form_block {
@@ -68,27 +113,27 @@
             </div>
             <form class="form_block" id="input_form">
                 <div class="form_items_a">
-                    <label for="fs_input">Fs (Resonance frequency of driver):</label><br>
-                    <input class="def_inp" type="text" id="fs_input" value="" placeholder="Hz"><br><br>
-                    <label for="re_input">Re (DC resistance of driver):</label><br>
-                    <input class="def_inp" type="text" id="re_input" value="" placeholder="Ohm"><br><br>
-                    <label for="zmax_input">Zmax (Impedance at Fs):</label><br>
-                    <input class="def_inp" type="text" id="zmax_input" value="" placeholder="Ohm"><br><br>
-                    <label for="z0_input">Z0 (Calculated automatically for F1 and F2):</label><br>
-                    <input class="def_inp readonly" type="text" id="z0_input" value="" placeholder="Ohm"
-                            readonly><br><br>
-                    <label for="f1_input">F1 (Lower frequency where Z=Z0):</label><br>
-                    <input class="def_inp" type="text" id="f1_input" value="" placeholder="Hz"><br><br>
+                    <label for="fs_input">Fs (Resonance frequency of driver):</label>
+                    <input class="def_inp" type="text" id="fs_input" value="" placeholder="Hz">
+                    <label for="re_input">Re (DC resistance of driver):</label>
+                    <input class="def_inp" type="text" id="re_input" value="" placeholder="Ohm">
+                    <label for="zmax_input">Zmax (Impedance at Fs):</label>
+                    <input class="def_inp" type="text" id="zmax_input" value="" placeholder="Ohm">
+                    <label for="z0_input">Z0 (Calculated automatically for F1 and F2):</label>
+                    <input class="def_inp readonly" type="text" id="z0_input" value="" placeholder="Ohm" readonly>
+                    <label for="f1_input">F1 (Lower frequency where Z=Z0):</label>
+                    <input class="def_inp" type="text" id="f1_input" value="" placeholder="Hz">
                 </div>
                 <div class="form_items_b">
-                    <label for="f2_input">F2 (Upper frequency where Z=Z0):</label><br>
-                    <input class="def_inp" type="text" id="f2_input" value="" placeholder="Hz"><br><br>
-                    <label for="qms_input">Qms:</label><br>
-                    <input class="def_inp readonly" type="text" id="qms_input" value="" readonly><br><br>
-                    <label for="qes_input">Qes:</label><br>
-                    <input class="def_inp readonly" type="text" id="qes_input" value="" readonly><br><br>
-                    <label for="qts_input">Qts:</label><br>
-                    <input class="def_inp readonly" type="text" id="qts_input" value="" readonly><br><br><br>
+                    <label for="f2_input">F2 (Upper frequency where Z=Z0):</label>
+                    <input class="def_inp" type="text" id="f2_input" value="" placeholder="Hz">
+                    <label for="qms_input">Qms:</label>
+                    <input class="def_inp readonly" type="text" id="qms_input" value="" readonly>
+                    <label for="qes_input">Qes:</label>
+                    <input class="def_inp readonly" type="text" id="qes_input" value="" readonly>
+                    <label for="qts_input">Qts:</label>
+                    <input class="def_inp readonly" type="text" id="qts_input" value="" readonly>
+                    <label for="qts_input">&nbsp;</label>
                     <input type="submit" class="calc_btn" id="calc_btn" value="Calculate">
                 </div>
             </form>
