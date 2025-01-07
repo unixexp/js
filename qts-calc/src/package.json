@@ -1,0 +1,17 @@
+{
+  "name": "qts-calc",
+  "version": "1.0.0",
+  "main": "qts-calc.js",
+  "scripts": {
+    "start": "node ./qts-calc.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "moment": "^2.30.1",
+    "path": "^0.12.7"
+  },
+  "type": "module"
+}
