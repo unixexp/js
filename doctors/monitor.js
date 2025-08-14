@@ -47,8 +47,14 @@ const fetchData = async (config) => {
         const doctorAPIRef = config.schedule_api_ref.replace("%%api_id%%", doctor.api_id)
         return fetch(doctorAPIRef)
     }))
-    const data = await Promise.all(responses.map(response => response.json()))
+    let data = {}
     const schedule = []
+    try {
+        data = await Promise.all(responses.map(response => response.json()))
+    } catch (error) {
+        console.log(error)
+        return schedule
+    }
     for (let i = 0; i < data.length; i++) {
         schedule.push({
             ...config.doctors[i],
