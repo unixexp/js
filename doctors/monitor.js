@@ -2,13 +2,20 @@
 
 import fs from 'fs'
 
+let last_messages = ""
+
 const notify = async (doctors, config) => {
     const messagesList = doctors.map(doctor => {
         const dates = (doctor.free.map(visit => visit.date)).join("\n")
         return `<a href="${doctor.book}"><strong>${doctor.type}</strong>\n${doctor.name}</a>\n${dates}`
     })
     const messages = messagesList.join("\n\n")
+
+    // Prevent spaming about already notified
+    if (messages === last_messages)
+        return false
     
+    last_messages = messages
     const { func, link, token, subscribers } = config.telegram_bot
     subscribers.map(async subscriber => {
         if (subscriber.enabled) {
@@ -24,9 +31,10 @@ const notify = async (doctors, config) => {
                             parse_mode: "HTML"
                         })
                     })
-                if (response.status != 200)
+                if (response.status != 200) {
                     console.log(`Cannot send message to subscriber '${subscriber.name}':`)
                     console.log(response)
+                }
             } catch (error) {
                 console.log(`Cannot send message to subscriber '${subscriber.name}':\n${error}`)
             }
