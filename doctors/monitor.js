@@ -2,8 +2,6 @@
 
 import fs from 'fs'
 
-const notification_repeat = 3
-let notification_counter = 0
 let last_messages = ""
 
 const notify = async (doctors, config) => {
@@ -14,12 +12,10 @@ const notify = async (doctors, config) => {
     const messages = messagesList.join("\n\n")
 
     // Prevent spaming about already notified
-    if (messages === last_messages && notification_counter >= notification_repeat) {
-        notification_counter = 0
+    if (messages === last_messages) {
         return false
     }
     
-    notification_counter++
     last_messages = messages
     const { func, link, token, subscribers } = config.telegram_bot
     subscribers.map(async subscriber => {
