@@ -94,6 +94,8 @@ const process = async () => {
 
     const bufferData = fs.readFileSync("./config.json")
     const config = JSON.parse(bufferData.toString())
+    config.doctors = config.doctors.filter(doctor => doctor.enabled == true)
+
     const schedule = await fetchData(config)
     const freeDoctors = check(schedule)
     if (freeDoctors.length)

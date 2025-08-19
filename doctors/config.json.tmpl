@@ -1,15 +1,15 @@
 {
-    "schedule_api_ref": "https://ehr.h24.ua/api/v2/employees/%%api_id%%/schedule?period_start=2025-08-14&period_end=2025-08-31",
+    "schedule_api_ref": "https://ehr.h24.ua/api/v2/employees/%%api_id%%/schedule?period_start=2025-08-19&period_end=2025-08-31",
     "book_ref": "https://h24.ua/booking/edit-book/%%book_id%%",
     "telegram_bot": {
         "func": {
             "send_message": "https://api.telegram.org/bot%%token%%/sendMessage"
         },
-        "link": "t.me/",
+        "link": "t.me/XXXBot",
         "token": "",
         "subscribers": [
-            {"chat_id": 0, "name": "Yurii", "enabled": true},
-            {"chat_id": 0, "name": "Marina", "enabled": false}
+            {"chat_id": 0, "name": "User1", "enabled": true},
+            {"chat_id": 0, "name": "User2", "enabled": true}
         ]
     },
     "doctors": [
@@ -17,55 +17,96 @@
             "api_id": "316130",
             "book_id": "202094559",
             "type": "Ортопед-травматолог",
-            "name": "Шматко Андрій Миколайович"
+            "name": "Шматко Андрій Миколайович",
+            "enabled": true
         },
         {
             "api_id": "350851",
             "book_id": "202093273",
             "type": "Ортопед-травматолог",
-            "name": "Міщенко Олена Миколаївна"
+            "name": "Міщенко Олена Миколаївна",
+            "enabled": true
         },
         {
             "api_id": "316453",
             "book_id": "202092273",
             "type": "Ортопед-травматолог",
-            "name": "Євтух Святослав Дмитрович"
+            "name": "Євтух Святослав Дмитрович",
+            "enabled": true
         },
+
         {
             "api_id": "315201",
             "book_id": "202090260",
             "type": "Невролог",
-            "name": "Павлєєв Сергій Георгійович"
+            "name": "Павлєєв Сергій Георгійович",
+            "enabled": true
         },
         {
             "api_id": "316308",
             "book_id": "202088643",
             "type": "Невролог",
-            "name": "Лісуха Любов Михайлівна"
+            "name": "Лісуха Любов Михайлівна",
+            "enabled": true
         },
+
         {
             "api_id": "346830",
             "book_id": "202086562",
             "type": "Офтальмолог",
-            "name": "Шевчун Олена Володимирівна"
+            "name": "Шевчун Олена Володимирівна",
+            "enabled": true
         },
         {
             "api_id": "315866",
             "book_id": "202086367",
             "type": "Офтальмолог",
-            "name": "Рухлядіна Ірина Миколаївна"
+            "name": "Рухлядіна Ірина Миколаївна",
+            "enabled": true
         },
         {
             "api_id": "315894",
             "book_id": "202086231",
             "type": "Офтальмолог",
-            "name": "Владецька Наталя Анатоліївна"
+            "name": "Владецька Наталя Анатоліївна",
+            "enabled": true
         },
         {
             "api_id": "315955",
             "book_id": "202085343",
             "type": "Офтальмолог",
-            "name": "Пруц Ольга Михайлівна"
+            "name": "Пруц Ольга Михайлівна",
+            "enabled": true
+        },
+
+        {
+            "api_id": "316180",
+            "book_id": "203883309",
+            "type": "Лікар фізичної та реабілітаційної медицини",
+            "name": "Безкоровайна Ілона Андріївна",
+            "enabled": false
+        },
+
+        {
+            "api_id": "316364",
+            "book_id": "203884977",
+            "type": "Отоларинголог (ЛОР) дитячий",
+            "name": "Грищенко Наталія Миколаївна",
+            "enabled": false
+        },
+        {
+            "api_id": "316353",
+            "book_id": "203886089",
+            "type": "Отоларинголог (ЛОР) дитячий",
+            "name": "Жабінець Надія Іванівна",
+            "enabled": false
+        },
+        {
+            "api_id": "316293",
+            "book_id": "203886606",
+            "type": "Отоларинголог (ЛОР) дитячий",
+            "name": "Матруніч Максим Валерійович",
+            "enabled": false
         }
     ]
 }
