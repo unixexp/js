@@ -1,11 +1,12 @@
 {
     "schedule_api_ref": "https://ehr.h24.ua/api/v2/employees/%%api_id%%/schedule?period_start=2025-08-19&period_end=2025-08-31",
-    "book_ref": "https://h24.ua/booking/edit-book/%%book_id%%",
+    "book_ref_old": "https://h24.ua/booking/edit-book/%%book_id%%",
+    "book_ref": "https://h24.ua/organization?employeeInternalId=%%book_id%%&organizationSlug=ohmatdyt",
     "telegram_bot": {
         "func": {
             "send_message": "https://api.telegram.org/bot%%token%%/sendMessage"
         },
-        "link": "t.me/XXXBot",
+        "link": "t.me/blablaBot",
         "token": "",
         "subscribers": [
             {"chat_id": 0, "name": "User1", "enabled": true},
@@ -14,37 +15,58 @@
     },
     "doctors": [
         {
+            "api_id": "316019",
+            "book_id": "0c355b7c-a0ab-4f5f-803e-8f142c153c97",
+            "type": "Ортопед-травматолог",
+            "name": "Дерех Ігор Зіновійович",
+            "enabled": true
+        },
+        {
             "api_id": "316130",
-            "book_id": "202094559",
+            "book_id": "33003d9b-91b7-4b40-9d0f-47c04c2f773f",
             "type": "Ортопед-травматолог",
             "name": "Шматко Андрій Миколайович",
             "enabled": true
         },
         {
             "api_id": "350851",
-            "book_id": "202093273",
+            "book_id": "c191d549-9ea7-4e5b-9372-752774ba2fed",
             "type": "Ортопед-травматолог",
             "name": "Міщенко Олена Миколаївна",
             "enabled": true
         },
         {
             "api_id": "316453",
-            "book_id": "202092273",
+            "book_id": "f76c291e-ac95-44f6-9b8d-a2f2d8a33a0a",
             "type": "Ортопед-травматолог",
             "name": "Євтух Святослав Дмитрович",
+            "enabled": true
+        },
+        {
+            "api_id": "315895",
+            "book_id": "85e24d1f-203e-405a-b9fb-dcdebaeed0fe",
+            "type": "Ортопед-травматолог дитячий",
+            "name": "Вітязь Володимир Миколайович",
+            "enabled": true
+        },
+        {
+            "api_id": "350843",
+            "book_id": "a7baae3f-b72a-4b9f-bb20-b1b56bb91bb3",
+            "type": "Ортопед-травматолог дитячий",
+            "name": "Головатюк Дмитро Володимирович",
             "enabled": true
         },
 
         {
             "api_id": "315201",
-            "book_id": "202090260",
+            "book_id": "8ea48a7d-9e1e-46c6-a248-2bd4688a2e26",
             "type": "Невролог",
             "name": "Павлєєв Сергій Георгійович",
             "enabled": true
         },
         {
             "api_id": "316308",
-            "book_id": "202088643",
+            "book_id": "b2522431-2955-4086-b2ed-962bb94e88bd",
             "type": "Невролог",
             "name": "Лісуха Любов Михайлівна",
             "enabled": true
@@ -52,28 +74,28 @@
 
         {
             "api_id": "346830",
-            "book_id": "202086562",
+            "book_id": "e5db4cd4-bacb-40cd-9aaa-7c7f16ad7cee",
             "type": "Офтальмолог",
             "name": "Шевчун Олена Володимирівна",
             "enabled": true
         },
         {
             "api_id": "315866",
-            "book_id": "202086367",
+            "book_id": "54de7a55-f0f9-4767-a18d-2cedece0ff99",
             "type": "Офтальмолог",
             "name": "Рухлядіна Ірина Миколаївна",
             "enabled": true
         },
         {
             "api_id": "315894",
-            "book_id": "202086231",
+            "book_id": "e1f6cdfb-e3ae-494f-a9c3-d8adf715c6b5",
             "type": "Офтальмолог",
             "name": "Владецька Наталя Анатоліївна",
             "enabled": true
         },
         {
             "api_id": "315955",
-            "book_id": "202085343",
+            "book_id": "b5ddb8ee-c6ef-4597-8fcc-73325c195ff0",
             "type": "Офтальмолог",
             "name": "Пруц Ольга Михайлівна",
             "enabled": true
